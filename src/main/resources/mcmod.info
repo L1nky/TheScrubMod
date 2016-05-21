@@ -1,0 +1,16 @@
+[
+{
+  "modid": "thescrubmod",
+  "name": "The Scrub Mod",
+  "description": "A mod for scrubs",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["L1nky"],
+  "credits": "All the scrubs",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
