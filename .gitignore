@@ -3,7 +3,6 @@
 !/src
 !/src/**
 !.gitignore
-!README.txt
 
 # eclipse
 bin
