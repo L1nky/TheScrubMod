@@ -1,8 +1,8 @@
-package com.github.l1nky.thescrubmod;
+package com.github.l1nky.thescrubmod.proxy;
 
 import java.io.File;
 
-public class TheScrubModServer extends TheScrubModCommon
+public class ServerProxy extends CommonProxy
 {
     @Override
     public void preInit(File configFile)

@@ -2,6 +2,8 @@ package com.github.l1nky.thescrubmod;
 
 import org.apache.logging.log4j.Logger;
 
+import com.github.l1nky.thescrubmod.proxy.CommonProxy;
+
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -10,16 +12,14 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = TheScrubMod.MODID, name = "The Scrub Mod", version = "1.0")
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
 public class TheScrubMod
 {
-    public static final String MODID = "thescrubmod";
-    
-    @Instance(TheScrubMod.MODID)
+    @Instance(Reference.MOD_ID)
     public static TheScrubMod instance;
     
-    @SidedProxy(clientSide = "com.github.l1nky.thescrubmod.TheScrubModClient", serverSide = "com.github.l1nky.thescrubmod.TheScrubModServer")
-    public  static TheScrubModCommon proxy;
+    @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
+    public static CommonProxy proxy;
     
     public static Logger log;
     
