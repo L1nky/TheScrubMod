@@ -11,6 +11,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
 public class TheScrubMod
@@ -28,6 +29,7 @@ public class TheScrubMod
     {
         TheScrubMod.log = event.getModLog();
         TheScrubMod.proxy.preInit(event.getSuggestedConfigurationFile());
+        GameRegistry.registerWorldGenerator(new MyGenerator(), 100);
     }
     
     @EventHandler
